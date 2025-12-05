@@ -1,63 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial scale=1.0">
-	<title>My Website</title>
-	<style>
-		body {
-			margin: 0;
-			font-family: Arial, San-serif;
-			background-color: #e8f5e9; /* soft green */
-		}
-		header {
-			
-			background-color: #2e7d32;
-			padding: 20px;
-			text-align: center;
-		}
-		header a {
-			color: white;
-			text -decoration: none;
-			margin: 0 20px;
-			font-size: 20px;
-			font-weight: bold;
-		}
-		header a: hover {
-			text -decoration: underline;
-		}
-		.container {
-			width: 90%;
-			margin: 50px auto;
-			text-align: center;
-		}
-		h1 {
-			color: #1b5e20;
-		}
-		img {
-			width: 500px;
-			border radius: 10px;
-			box shadow: 0 0 10px rgba(0,0,0,0.3);
-			height: 500px;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nur Raihan Johari | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f0f5f2;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #2e7d32;
+      padding: 15px 0;
+      z-index: 1000;
+      animation: slideDown 1s ease;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #c8e6c9;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #1b5e20;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
+
+    .hero img {
+      width: 250px;
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #2e7d32;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .skills, .experience {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 250px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 36px;
+      color: #2e7d32;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+      .hero p { font-size: 18px; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-	<a href="index.html">Home</a>
-	<a href="biodata.html">About Me</a>
-	<a href="career.html">Career Overview</a>
-	<a href="contact.html">Contact</a>	
-</header>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="biodata.html">About Me</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="container">
-	<h1>Welcome to My Personal Resume</h1>
-	<p>Hai, I am Nur Raihan Johari, Thank You so Much for Visiting My Website, Discover About my Skills & Experience and more by click at the menu above.</p>
-	<br>
-	<img src="images/mypicture.jpeg" alt="My Image">
-</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Nur Raihan Johari</h1>
+    <p>Hello! I’m a budding web designer. Explore my portfolio to discover my skills, experience, and projects.</p>
+    <img src="images/mypicture.jpeg" alt="My Photo">
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">
+        <i class="fa-brands fa-html5"></i>
+        <h3>HTML</h3>
+        <p>Creating structured and semantic web pages</p>
+      </div>
+      <div class="card">
+        <i class="fa-brands fa-css3-alt"></i>
+        <h3>CSS</h3>
+        <p>Styling modern, responsive websites</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-pencil"></i>
+        <h3>Design</h3>
+        <p>Graphic design and Canva basics</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section" style="background-color:#e0f2f1;">
+    <h2>Experience</h2>
+    <div class="experience">
+      <div class="card">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Web Projects</h3>
+        <p>Designed and built personal website portfolio</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Event Assistant</h3>
+        <p>Helped organize school events and multimedia projects</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-certificate"></i>
+        <h3>Skills Development</h3>
+        <p>Improved HTML, CSS, and basic graphic skills</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Nur Raihan Johari. All rights reserved.
+  </footer>
 
 </body>
 </html>
-	
