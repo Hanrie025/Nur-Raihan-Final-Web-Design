@@ -1,105 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset=UFT-8">
-	<meta name=viewport" content="width=device-width, initial scale=1.0">
-	<title>Contact Me</title>
-	<style>
-		body {
-			margin: 0;
-			font-family: Arial, sans-serif;
-			background-color: #e8f5e9; 
-		}
-		header {
-			
-			background-color: #2e7d32;
-			padding: 20px;
-			text-align: center;
-		}
-		header a {
-			color: white;
-			text decoration: none;
-			margin: 0 20px;
-			font-size: 20px;
-			font-weight: bold;
-		}
-		header a: hover {
-			text -decoration: underline;
-		}
-		.container {
-			width: 90%;
-			margin: 40px auto;
-			background: white;
-			padding: 30px;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.2);
-		}
-		h1 {
-			text-align: center;
-			color: #1b5e20;
-			font-size: 32px;
-			margin-bottom: 10px;
-		}
-		hr {
-			width: 60%;
-			border: 1px solid #1b5e20;
-			margin-bottom: 30px;
-		}
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			font-size: 18px;
-		}
-		table, th, td {
-			border: 1px solid #2e7d32;
-		}
-		th, td {
-			padding: 12px;
-		}th {
-			background-color: #c8e6c9;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Nur Raihan Johari</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f3e5f5; /* soft lavender */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #6a1b9a; /* deep purple */
+      padding: 15px 0;
+      z-index: 1000;
+      animation: slideDown 1s ease;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    header nav a:hover {
+      color: #8e24aa; /* medium purple highlight */
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 60px auto;
+      background: white;
+      border-radius: 15px;
+      padding: 40px 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #6a1b9a; /* deep purple */
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contact-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: #d1c4e9; /* light purple */
+      width: 250px;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 36px;
+      color: #6a1b9a; /* deep purple */
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+
+    table, th, td {
+      border: 1px solid #6a1b9a; /* deep purple border */
+    }
+
+    th, td {
+      padding: 12px;
+    }
+
+    th {
+      background-color: #d1c4e9; /* light purple */
+      text-align: left;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background-color: #6a1b9a; /* deep purple */
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .section h2 { font-size: 28px; }
+      .card { width: 80%; }
+      table { font-size: 16px; }
+    }
+
+    /* Fade-in scroll animation */
+    .fade-row {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-row.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  </style>
 </head>
 <body>
 
-<header>
-	<a href="index.html">Home</a>
-	<a href="biodata.html">About Me</a>
-	<a href="career.html">Career Overview</a>
-	<a href="contact.html">Contact</a>
-</header>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="biodata.html">About Me</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="container">
-	<h1>Contact Me</h1>
-	<hr>
-	
-	<table>
-		<tr>
-			<th>Contact Type</th>
-			<th>Information</th>
-		</tr>
-		<tr>
-			<td>Email</td>
-			<td>Hanrie123@gmail.com<td>
-		</tr>
-		<tr>
-			<td>Phone</td>
-			<td>011-5643219<td>
-		</tr>
-		<tr>
-			<td>Address</td>
-			<td>No.3, Lorong Murni, Taman Mawar, 13200 Kepala Batas, Pulau Pinang<td>
-		</tr>
-		<tr>
-			<td>Social Media</td>
-			<td>Instagram-(Starlight_017)<td>
-		</tr>
-	</table>
-	
-	<div class="contact info">
-		<p>*Feel free to reach out through the above contact methods. i would be very grateful to hear from you*</p>
-	</div>
-</div>
+  <!-- Contact Section -->
+  <section class="section">
+    <h2>Contact Me</h2>
+
+    <div class="contact-cards">
+      <div class="card fade-row">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Email</h3>
+        <p>Hanrie123@gmail.com</p>
+      </div>
+      <div class="card fade-row">
+        <i class="fa-solid fa-phone"></i>
+        <h3>Phone</h3>
+        <p>011-5643219</p>
+      </div>
+      <div class="card fade-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <h3>Address</h3>
+        <p>No.3, Lorong Murni, Taman Mawar, 13200 Kepala Batas, Pulau Pinang</p>
+      </div>
+      <div class="card fade-row">
+        <i class="fa-brands fa-instagram"></i>
+        <h3>Instagram</h3>
+        <p>@Starlight_017</p>
+      </div>
+    </div>
+
+    <!-- Optional Table -->
+    <table>
+      <tr class="fade-row">
+        <th>Contact Type</th>
+        <th>Information</th>
+      </tr>
+      <tr class="fade-row">
+        <td>Email</td>
+        <td>Hanrie123@gmail.com</td>
+      </tr>
+      <tr class="fade-row">
+        <td>Phone</td>
+        <td>011-5643219</td>
+      </tr>
+      <tr class="fade-row">
+        <td>Address</td>
+        <td>No.3, Lorong Murni, Taman Mawar, 13200 Kepala Batas, Pulau Pinang</td>
+      </tr>
+      <tr class="fade-row">
+        <td>Instagram</td>
+        <td>@Starlight_017</td>
+      </tr>
+    </table>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Nur Raihan Johari. All rights reserved.
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const rows = document.querySelectorAll('.fade-row');
+
+    function checkRows() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      rows.forEach(row => {
+        const rowTop = row.getBoundingClientRect().top;
+        if(rowTop < triggerBottom) {
+          row.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkRows);
+    window.addEventListener('load', checkRows);
+  </script>
 
 </body>
 </html>
