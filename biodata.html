@@ -1,131 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset=UFT-8">
-	<meta name=viewport" content="width=device-width, initial scale=1.0">
-	<title>My Website</title>
-	<style>
-		body {
-			margin: 0;
-			font-family: Arial, sans-serif;
-			background-color: #e8f5e9; 
-		}
-		header {
-			
-			background-color: #2e7d32;
-			padding: 20px;
-			text-align: center;
-		}
-		header a {
-			color: white;
-			text decoration: none;
-			margin: 0 20px;
-			font-size: 20px;
-			font-weight: bold;
-		}
-		header a: hover {
-			text -decoration: underline;
-		}
-		.container {
-			width: 90%;
-			margin: 40px auto;
-			background: white;
-			padding: 30px;
-			border-radius: 10px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.2);
-		}
-		h1 {
-			text-align: center;
-			color: #1b5e20;
-			font-size: 32px;
-			margin-bottom: 10px;
-		}
-		hr {
-			width: 60%;
-			border: 1px solid #1b5e20;
-			margin-bottom: 30px;
-		 }
-		.img-center {
-			text-align: center;
-			margin-bottom: 30px;
-		}
-		img {
-			 width: 100px;
-			 border-radius: 10px;
-			 box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Nur Raihan Johari</title>
 
-		}
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			font-size: 18px;
-		}
-		table, th, td {
-			border: 1px solid #2e7d32;
-		}
-		th, td {
-			padding: 12px;
-		}th {
-			background-color: #c8e6c9;
-		}
-	</style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #fff0f5; /* soft pink */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #c2185b; /* deep rose */
+      padding: 15px 0;
+      z-index: 1000;
+      animation: slideDown 1s ease;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ec407a; /* medium pink highlight */
+      transform: scale(1.05);
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      color: #c2185b; /* deep rose */
+      margin-bottom: 15px;
+    }
+
+    .hero img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .section h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #c2185b; /* deep rose */
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 18px;
+      animation: fadeIn 2s ease;
+    }
+
+    table, th, td {
+      border: 1px solid #c2185b; /* deep rose border */
+    }
+
+    th, td {
+      padding: 12px;
+    }
+
+    th {
+      background-color: #f8bbd0; /* light pink */
+      text-align: left;
+    }
+
+    .section img {
+      display: block;
+      margin: 0 auto 20px;
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .section img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #c2185b; /* deep rose */
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 32px; }
+      table { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-	<a href="index.html">Home</a>
-	<a href="biodata.html">About Me</a>
-	<a href="career.html">Career Overview</a>
-	<a href="contact.html">Contact</a>
-</header>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="biodata.html">About Me</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<div class="container">
-	<h1>My Biodata</h1>
-	<hr>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/myprofile.jpg" alt="My Photo">
+    <h1>Nur Raihan Johari</h1>
+    <p>Discover my skills, experience, and background below.</p>
+  </section>
 
-	<div class="img-center">
-		<img src="images/myprofile.jpg" alt="My Photo">
-	</div>
+  <!-- Biodata Section -->
+  <section class="section">
+    <h2>Personal Information</h2>
+    <table>
+      <tr>
+        <th>Full Name</th>
+        <td>Nur Raihan Binti Johari</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>20 Years Old</td>
+      </tr>
+      <tr>
+        <th>Date of Birth</th>
+        <td>25 August 2005</td>
+      </tr>
+      <tr>
+        <th>Fovaurite Colour</th>
+        <td>Purple, black</td>
+      </tr>
+      <tr>
+        <th>Fun Fact</th>
+        <td>I once have a cat named Rain who love egg yolk and Chici who is diva of our family</td>
+      </tr>
+      <tr>
+        <th>Value and Passionate</th>
+        <td>I am passionate about planting strawberry farm one day</td>
+      </tr>
+      <tr>
+        <th>Future Goal</th>
+        <td>I dream of starting my own company one day</td>
+      </tr>
+    </table>
+  </section>
 
-	<table>
-		<tr>
-			<th>Full Name</th>
-			<td>Nur Raihan Binti Johari</td>
-		</tr>
-		<tr>
-			<th>Age</th>
-			<td>20 Years Old</td>
-		</tr>
-		<tr>
-			<th>Date of Birth</th>
-			<td>25 August 2005</td>
-		</tr>
-		<tr>
-			<th>Hobbies</th>
-			<td>Drawing and knitting</td>
-		</tr>
-		<tr>
-			<th>Favourite Colour</th>
-			<td>Purple and black</td>
-		</tr>
-		<tr>
-			<th>About Me</th>
-			<td>I love exploring new places and travelling, discovering new experience along the way</td>
-		</tr>
-		<tr>
-			
-			
-		
-	</table>
-</div>
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Nur Raihan Johari. All rights reserved.
+  </footer>
 
 </body>
 </html>
 
-
-
-
-
-
 	
+
 			
